@@ -1,0 +1,176 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+
+  --brown-800: hsl(14, 45%, 36%);
+
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+
+  --ff-accent: "Young Serif", serif;
+  --ff-base: "Outfit", sans-serif;
+
+  --fs-xlarge: 36px;
+  --fs-large: 28px;
+  --fs-medium: 20px;
+  --fs-regular: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  background-color: var(--stone-100);
+  font-family: var(--ff-base);
+  color: var(--stone-600);
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  background-color: var(--white);
+  max-width: 736px;
+}
+
+.container-content {
+  padding: 40px 32px;
+  display: grid;
+  gap: 32px;
+  max-width: 736px;
+  background-color: var(--white);
+}
+
+.section {
+  display: grid;
+  gap: 1.5rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--stone-150);
+}
+
+.main-header {
+  font-size: var(--fs-xlarge);
+  font-weight: 100;
+  font-family: var(--ff-accent);
+  color: var(--stone-900);
+}
+
+.main-description {
+  font-size: var(--fs-regular);
+  color: var(--stone-600);
+}
+
+.preparation-time-container {
+  display: grid;
+  gap: 1rem;
+  background-color: var(--rose-50);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.preparation-title {
+  color: var(--rose-800);
+  font-size: 1.25rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+li {
+  padding-left: 1rem;
+}
+
+li::marker {
+  color: var(--brown-800);
+}
+
+.header {
+  font-family: var(--ff-accent);
+  color: var(--brown-800);
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-row:not(:last-child) {
+  border: 4px;
+  border-bottom: 1px solid var(--stone-150);
+}
+
+td {
+  padding: 12px 32px;
+}
+
+tr:first-child td {
+  padding-top: 0;
+}
+
+tr:last-child td {
+  padding-bottom: 0;
+}
+
+.units {
+  color: var(--brown-800);
+  font-weight: bold;
+}
+
+@media screen and (min-width: 500px) {
+  :root {
+    --fs-xlarge: 40px;
+  }
+
+  .recipe-image {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .img-container {
+    padding: 40px;
+    padding-bottom: 0;
+  }
+
+  .container {
+    margin: 128px auto;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+}
